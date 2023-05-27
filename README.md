@@ -1,3 +1,4 @@
+Less is more.
 # What is machine learning ?
 Machine learning have applied to many areas nowadays. Normally, the goal of most machine learning algorithms is to construct a model, to estimate Y(Outcome) based on X(Features).
 
