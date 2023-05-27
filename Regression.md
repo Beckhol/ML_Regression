@@ -7,4 +7,4 @@ The simplest example of f(x) is `y = mx + c`. It is the form of linear equations
 In linear regression, we need to find a **best-fit** linear equation.  
 Use the figures below, we may insert a line to fit the points inside.(left to right)
 <center><img src="/lg.jpg" alt=""></center>  
-What is the meaning of **best-fit** ❓
+What is the meaning of **best-fit** ？
