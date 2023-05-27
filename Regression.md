@@ -4,4 +4,6 @@ Just find one f then we solve the problem.
 
 # Linear Regression
 The simplest example of f(x) is `y = mx + c`. It is the form of linear equations.  
-Use the figures below, we may insert a line to fit the points inside.
+In linear regression, we need to find a **best-fit** linear equation.  
+Use the figures below, we may insert a line to fit the points inside.(left to right)
+<center><img src="/lg.jpg" alt=""></center>
