@@ -11,6 +11,6 @@ Use the figures below, we may insert a line to fit the points inside.(left to ri
 What is the meaning of **best-fit** ？
 **Answer:**  The predicted values will be as close as possible to 'reality'.  
 De-abstraction, measure distance between predicted values and real values, which refers to a terminology 👉🏻 **residual**  
-$$residual = |y - \hat{y}|$$
+$$residual = |y - \hat{y}| = y - (mx + c)$$
 
 
