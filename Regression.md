@@ -2,7 +2,7 @@ Before we take part in the regression algorithms, there is one more thing need t
 The **core** of the machine learning, is to find one equation  `y = f(x)`   
 Just find one f then we solve the problem.  
 
-# 1. Linear Regression
+# Linear Regression
 The simplest example of f(x) is `y = mx + c`. It is the form of linear equations.  
 In linear regression, we need to find a **best-fit** linear equation.  
 Use the figures below, we may insert a line to fit the points inside.(left to right)
@@ -19,7 +19,7 @@ In Regression, we seek to minimise these losses by tuning m and c. There are two
 * Gradient Descent
 * Normal Equation
 
-## 1.1 Gradient Descent
+## 1.Gradient Descent
 Gradient is the coefficient of x in the equation which is m. For Gradient Descent, we want to minimise the losses by tuning **m** and **c** which is the y-intercept. Let's first focus on how to update the **m**.
 $$m^{t+1} = m^t - \gamma\frac{dL(m^t)}{dm}$$
 $m^{t+1}$ `is the updated gradient`  
@@ -67,4 +67,34 @@ By combining these two matrix, we can calculate the predicted values by $\hat{y}
           \end{bmatrix}
     
 ```
+### 1.1 Extention to polynomial
+We have tried to fit $mx+c$. In the same way, it can be used to extend to any order of polynomial. We will use $x^2$ as an example of p = 2.  
+Now we need to fit $ax^2 + bx + c$, the design matrix will be:
+```math
+\begin{bmatrix}
+1 & 1 & 1 & 1 & 1 & 1 \\
+x_0 & x_1 & x_2 & x_3 & x_4 & x_5\\
+x_0^2 & x_1^2 & x_2^2 & x_3^2 & x_4^2 & x_5^2 
+\end{bmatrix}
+```  
+The predicted values now changes to:  
+```math
+\hat{Y} = \begin{bmatrix}
+          1 & x_0 & x_0^2 \\
+          1 & x_1 & x_1^2\\
+          1 & x_2 & x_2^2\\
+          1 & x_3 & x_3^2\\
+          1 & x_4 & x_4^2\\
+          1 & x_5 & x_5^2
+          \end{bmatrix}
+          \times
+          \begin{bmatrix}
+          c \\
+          b \\
+          a
+          \end{bmatrix}
+```
 
+## 2. Normal Equation
+If a function is differentiable, we can differentiate to find when the gradient is zero, and solve for the minimum directly.  
+The loss function is 
