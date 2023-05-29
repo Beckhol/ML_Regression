@@ -20,7 +20,7 @@ In Regression, we seek to minimise these losses by tuning m and c. There are two
 * Normal Equation
 
 ## 1.1 Gradient Descent
-Gradient is the coefficient of x in the equation which is m. For Gradient Descent, we want to minimise the losses by tuning m.
+Gradient is the coefficient of x in the equation which is m. For Gradient Descent, we want to minimise the losses by tuning **m** and **c** which is the y-intercept. Let's first focus on how to update the **m**.
 $$m^{t+1} = m^t - \gamma\frac{dL(m^t)}{dm}$$
 $m^{t+1}$ `is the updated gradient`  
 $m^t$ `is the original gradient`  
@@ -28,3 +28,15 @@ $\gamma$ `is the learning rate`
 $\frac{dL(m^t)}{dm}$ `is the differential of the loss function, take the original gradient as the input parameter`  
 Initially, the gradient value and learning rate are set by a guess. Then iterates the process of updated gradient until we get the best result from the loss function.  
 A potential problem is that if the learning rate value is too large, it will not converge.  
+
+To perform gradient descent on both **m** and the intercept **c**, we need to change the input matrix 👉🏻 **design matrix**   
+$$
+\left[
+\begin{bmatrix}
+    1 & 2 & 3 \\\\
+    4 & 5 & 6 \\\\
+    7 & 8 & 9
+\end{bmatrix}
+\right] \tag{3}
+$$
+
