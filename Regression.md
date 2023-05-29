@@ -29,14 +29,42 @@ $\frac{dL(m^t)}{dm}$ `is the differential of the loss function, take the origina
 Initially, the gradient value and learning rate are set by a guess. Then iterates the process of updated gradient until we get the best result from the loss function.  
 A potential problem is that if the learning rate value is too large, it will not converge.  
 
-To perform gradient descent on both **m** and the intercept **c**, we need to change the input matrix 👉🏻 **design matrix**   
-$$
-\left[
+To perform gradient descent on both **m** and the intercept **c**, we need to change the input matrix 👉🏻 **design matrix**  
+The original input matrix is:(the value in the matrix is the x-features)
+```math
 \begin{bmatrix}
-    1 & 2 & 3 \\\\
-    4 & 5 & 6 \\\\
-    7 & 8 & 9
+x_0 & x_1 & x_2 & x_3 & x_4 & x_5
 \end{bmatrix}
-\right] \tag{3}
-$$
+```  
+The updated input matrix is:(including the y-intercept)
+```math
+\begin{bmatrix}
+1 & 1 & 1 & 1 & 1 & 1 \\
+x_0 & x_1 & x_2 & x_3 & x_4 & x_5
+\end{bmatrix}
+```  
+Parameters *c* and *m* is:
+```math
+\begin{bmatrix}
+c \\
+m
+\end{bmatrix}
+```  
+By combining these two matrix, we can calculate the predicted values by $\hat{y} = X^T \times \theta$ :  
+```math
+\hat{Y} = \begin{bmatrix}
+          1 & x_0 \\
+          1 & x_1 \\
+          1 & x_2 \\
+          1 & x_3 \\
+          1 & x_4 \\
+          1 & x_5 
+          \end{bmatrix}
+          \times
+          \begin{bmatrix}
+          c \\
+          m
+          \end{bmatrix}
+    
+```
 
