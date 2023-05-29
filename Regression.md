@@ -97,4 +97,31 @@ The predicted values now changes to:
 
 ## 2. Normal Equation
 If a function is differentiable, we can differentiate to find when the gradient is zero, and solve for the minimum directly.  
-The loss function is 
+The loss function is:  
+```math
+          L(\theta) = (y - \theta x)^T(y-\theta x) \\
+                    = x^T \theta^T\theta x - 2x^Ty\theta + y^Ty
+```
+After differentation:
+```math
+          \frac{dL}{\theta} = 2x^Tx\theta - 2x^Ty
+```
+Set to zero to find minimum loss:
+```math
+          \frac{dL}{\theta} = 2x^Tx\theta - 2x^Ty = 0
+```
+```math
+          \theta = \frac{y^Tx}{x^Tx}
+```
+## 3. Comparison between Gradient Descent and Normal Equation
+*Gradient Descent*:
+* Careful choice of learning rate
+* Not always optimal
+* Take care of selecting order of polynomial
+* Any differentiable function  
+
+*Normal Equation*:
+* Fast for small datasets
+* Optimal
+* Inversion of $X^TX$ is costly 
+
