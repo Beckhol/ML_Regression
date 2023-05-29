@@ -127,3 +127,7 @@ Set to zero to find minimum loss:
 * Inversion of $X^TX$ is costly 
 
 ## 4. Issues in Linear Regression ➡️ Overfitting
+Sometimes it is not a good thing for us to pursue the model that fits our data too much.  
+Here is an example of overfitting, the error is 0:  
+<center><img src="/overfitting.jpg" alt=""></center> 
+
