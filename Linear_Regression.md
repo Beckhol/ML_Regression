@@ -126,3 +126,4 @@ Set to zero to find minimum loss:
 * Optimal
 * Inversion of $X^TX$ is costly 
 
+## 4. Issues in Linear Regression ➡️ Overfitting
